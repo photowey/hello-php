@@ -28,15 +28,13 @@ class StringBufferTest extends TestCase
 
         foreach ($params as $key => $value) {
             $join = $buffer->join($key, $value);
-            $buffer->append($join)->append(":");
+            $buffer->append($join);
         }
         $toString = $buffer->toString("&");
         $toSortString = $buffer->toSortString("&");
 
-        printf($toString . "\n");
-        printf($toSortString . "\n");
-
-        $this->assertTrue(true);
+        $this->assertEquals("product_id=389238&user_id=29389&content=newproductmask&environment=test", $toString);
+        $this->assertEquals("content=newproductmask&environment=test&product_id=389238&user_id=29389", $toSortString);
     }
 
 }

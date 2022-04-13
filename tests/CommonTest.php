@@ -1,8 +1,5 @@
 <?php
 
-include_once __DIR__ . DIRECTORY_SEPARATOR . '../src/common/strings.php';
-include_once __DIR__ . DIRECTORY_SEPARATOR . '../src/common/arrays.php';
-
 use PHPUnit\Framework\TestCase;
 
 /**

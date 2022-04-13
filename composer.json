@@ -1,17 +1,17 @@
 {
   "name": "phello/hello-php",
   "description": "The simple grammar of php language.",
-  "license": "n",
+  "license": "Apache-2.0",
   "autoload": {
     "psr-4": {
       "Phello\\HelloPhp\\": "src/"
     },
     "files": [
-      "/src/common/arrays.php",
-      "/src/common/files.php",
-      "/src/common/jsons.php",
-      "/src/common/prints.php",
-      "/src/common/strings"
+      "\\src\\common\\arrays.php",
+      "\\src\\common\\files.php",
+      "\\src\\common\\jsons.php",
+      "\\src\\common\\prints.php",
+      "\\src\\common\\strings.php"
     ]
   },
   "authors": [
