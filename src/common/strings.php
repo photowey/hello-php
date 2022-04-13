@@ -72,5 +72,30 @@ if (!function_exists('pisClosure')) {
     }
 }
 
+if (!function_exists('is_blank')) {
+    /**
+     * 判断: 字符串是否为空
+     * "" 或者 null 将被判定为: true
+     * @param string | null $needle 指定字符串
+     * @return bool
+     */
+    function is_blank(?string $needle): bool
+    {
+        return !is_not_blank($needle);
+    }
+}
+
+if (!function_exists('is_not_blank')) {
+    /**
+     * 判断: 字符串是否不为空
+     * 非("" 或者 null) 将被判定为: true
+     * @param string | null $needle 指定字符串
+     * @return bool
+     */
+    function is_not_blank(?string $needle): bool
+    {
+        return strlen($needle) > 0;
+    }
+}
 
 
