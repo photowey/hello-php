@@ -57,5 +57,4 @@ class CommonTest extends TestCase
         $this->assertTrue(array_contains(["hello", "world", "tom", "jerry"], "tom"));
         $this->assertFalse(array_contains(["lilei", "hanmeimei", "lucy", "lily"], "rose"));
     }
-
 }

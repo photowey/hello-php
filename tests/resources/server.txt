@@ -1,0 +1,16 @@
+我是结果1 array (
+    'order_number' => '00000000001111'
+    'order_amount' => '1111'
+)
+我是结果2 array (
+    'order_number' => '00000000002222'
+    'order_amount' => '2222'
+)
+我是结果3 array (
+    'order_number' => '00000000003333'
+    'order_amount' => '3333'
+)
+我是结果4 array (
+    'order_number' => '00000000004444'
+    'order_amount' => '4444'
+)
