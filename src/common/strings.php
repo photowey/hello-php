@@ -1,4 +1,11 @@
 <?php
+if (!function_exists('printfln')) {
+    function printfln(string $message)
+    {
+        printf($message . "\n");
+    }
+}
+
 
 if (!function_exists('mb_ucfirst')) {
     function mb_ucfirst(string $string, string $encoding = 'UTF-8'): string

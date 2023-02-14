@@ -113,5 +113,23 @@ class Rsa
 
         return (bool)openssl_verify($data, base64_decode($sign), $public_Key, $algorithm);
     }
+
+    /**
+     * @throws Exception
+     */
+    function verify3(string $data, string $sign, string $public_Key = '', int $algorithm = OPENSSL_ALGO_SHA1): bool
+    {
+        if (empty($public_Key)) {
+            $public_Key = $this->publicKey;
+        }
+        $pub_key = openssl_pkey_get_public($public_Key);
+        if (!$pub_key) {
+            throw new Exception("parse the public key failure");
+        }
+
+        $candidate = hash("sha256", $data);
+
+        return (bool)openssl_verify($candidate, base64_decode($sign), $public_Key, $algorithm);
+    }
 }
 
